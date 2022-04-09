@@ -1,0 +1,41 @@
+@import '../selector.scss';
+
+.news{
+    margin-top: 60px;
+    &_wrapper{
+        margin-top: 60px;
+        display: grid;
+        width: 100%;
+        grid-template-columns: 416px 416px 416px;
+        grid-gap: 24px;
+        &_list{
+            padding: 30px 35px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: 0.3s all;
+            background: linear-gradient(0deg, rgba(1, 138, 190, 0.5), rgba(1, 138, 190, 0.5)), url(../../img/Sessions/girl.jpg) no-repeat center;
+            &-data{
+                width: 96px;
+                height: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: $blue;
+                border-radius: 5px;
+                @include font($white, 700, 14px, 18px);
+                font-family: 'Proxima Nova';
+            }
+            &:hover{
+                transform: translateY(5px);
+                opacity: 0.8;
+            }
+        }
+        h2{
+            margin-top: 139px;
+            @include font($white, 700, 21px, 140%);
+            font-family: 'El Messiri';
+        }
+    }
+}

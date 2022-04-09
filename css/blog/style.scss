@@ -1,0 +1,72 @@
+@import '../selector.scss';
+@import '../header.scss';
+@import 'blog';
+@import '../location.scss';
+
+.menu{
+    border-bottom: 1px solid  rgba(256, 256, 256, 0.5);
+    padding-bottom: 30px;
+}
+
+
+footer{
+    margin-top: 90px;
+    .container{
+        display: flex;
+        justify-content: space-between;
+        p{
+            text-decoration: none;
+            @include font($white, 400, 14px, 18px);
+            font-family: 'Proxima Nova';
+            margin-bottom: 30px;
+        }
+        a{
+            text-decoration: none;
+            @include font($white, 400, 14px, 18px);
+            font-family: 'Proxima Nova';
+        }
+    }
+}
+
+body{
+    background: #162831;
+}
+
+.heading{
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &_text{
+        @include font($white, 700, 42px, 58px);
+        text-align: center;
+        margin-left: 45px;
+        margin-right: 45px;
+        font-family: 'El Messiri';
+    }
+    &::before{
+        content: '';
+        width: 28px;
+        height: 14px;
+        background: url('../../img/SVG/blue_list.svg') no-repeat center;
+    }
+    &::after{
+        content: '';
+        width: 28px;
+        height: 14px;
+        background: url('../../img/SVG/blue_list.svg') no-repeat center;
+        transform: matrix(-1, 0, 0, 1, 0, 0);;
+    }
+}
+
+footer .container{
+    border-top: 1px solid  rgba(256, 256, 256, 0.5);
+    padding-top: 30px;
+}
+
+.container{
+    max-width: 1298px;
+    margin: 0 auto;
+}
+
+@import '../media.scss';

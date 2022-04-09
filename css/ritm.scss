@@ -1,0 +1,55 @@
+@import 'selector';
+
+.ritm{
+    position: relative;
+    width: 100%;
+    margin-top: 50px;
+    z-index: -2;
+    &_wrapper{
+        width: 100%;
+        padding-top: 136px;
+        padding-bottom: 190px;
+        border-radius: 10px;
+        background: url('../img/Ritm/ritmStyle_bg.jpg') no-repeat center;
+        background-size: 1290px auto;    
+        &_title{
+            @include font($white, 700, 64px, 140%);
+            font-family: 'El Messiri';
+            text-align: center;
+            margin-top: 40px;
+        }
+        &_list{
+            width: 430px;
+            display: flex;
+            margin: 0 auto;
+            justify-content: center;
+            &_subtitle{
+                @include font($white, 700, 24px, 140%);
+                font-family: 'El Messiri';
+                position: relative;
+                &::before{
+                    content: '';
+                    width: 28px;
+                    position: absolute;
+                    height: 14px;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    height: 14px;
+                    left: -90px;
+                    background: url('../img/list-left.svg') no-repeat center;
+                }
+                &::after{
+                    content: '';
+                    width: 28px;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%) matrix(-1, 0, 0, 1, 0, 0);;
+                    height: 14px;
+                    right: -90px;
+                    background: url('../img/list-left.svg') no-repeat center; 
+                } 
+            }
+        }
+    }
+}

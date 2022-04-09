@@ -1,0 +1,15 @@
+$white: #fff;
+$blue: #018ABE;
+$blueLight: #0296d1;
+
+@mixin wh($white, $height) {
+    width: $white;
+    height: $height;
+}
+
+@mixin font($color, $fontWeight, $fontSize, $lineHeight) {
+    color: $color;
+    font-weight: $fontWeight;
+    font-size: $fontSize;
+    line-height: $lineHeight;
+}

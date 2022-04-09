@@ -1,0 +1,86 @@
+@import 'selector';
+
+.location{
+    margin-top: 150px;
+    &_wrapper{
+        display: flex;
+        justify-content: space-between;
+        &_map{
+            width: 856px;
+            height: 604px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        &_address{
+            width: 392px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            &_list{
+                width: 100%;
+                height: 290px;
+                padding: 35px 45px;
+                border-radius: 10px;
+                background: $blue;
+                h2{
+                    @include font($white, 700, 24px, 34px);
+                    margin-bottom: 21px;
+                    font-family: 'El Messiri';
+                }
+                ul{
+                    li{
+                        display: flex;
+                        align-items: center;
+                        @include font($white, 400, 14px, 135%);
+                        margin-bottom: 21px;
+                        font-family: 'Proxima Nova';
+                        &:last-child{
+                            margin-bottom: 30px;
+                        }
+                        &::before{
+                            content: '';
+
+                        }
+                        img{
+                            margin-right: 23px;
+                        }
+                    }
+                }
+                button{
+                    background-color: $white;
+                    width: 155px;
+                    height: 36px;
+                    border-radius: 3px;
+                    transition: 0.3s all;
+                    a{
+                        @include font($blue, 600, 13px, 140%);
+                        text-decoration: none;
+                    }
+                    &:hover{
+                        transform: translateY(5px);
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer{
+    margin-top: 90px;
+    .container{
+        display: flex;
+        justify-content: space-between;
+        p{
+            text-decoration: none;
+            @include font($white, 400, 14px, 18px);
+            font-family: 'Proxima Nova';
+            margin-bottom: 30px;
+        }
+        a{
+            text-decoration: none;
+            @include font($white, 400, 14px, 18px);
+            font-family: 'Proxima Nova';
+        }
+    }
+}

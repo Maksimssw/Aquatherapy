@@ -1,0 +1,56 @@
+@import '../selector.scss';
+
+.blog{
+    margin-top: 60px;
+    &_wrapper{
+        margin-top: 60px;
+        width: 100%;
+        &_list{
+            width: 100%;
+            padding: 50px 60px;
+            display: flex;
+            border-radius: 20px;
+            justify-content: space-between;
+            border: 1px solid $blue;
+            margin-bottom: 40px;   
+            &-ph{
+                width: 45%;
+                height: 430px;
+                img{
+                    border-radius: 10px;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            &_text{
+                width: 47%;
+                &-data{
+                    width: 96px;
+                    height: 30px;
+                    background: $blue;
+                    border-radius: 5px;
+                    @include font($white, 700, 14px, 135%);
+                    font-family: 'Proxima Nova';
+                    margin-bottom: 35px;
+                }
+                h2{
+                    @include font($white, 700, 24px, 140%);
+                    font-family: 'El Messiri';
+                    margin-bottom: 20px;
+                }
+                p{
+                    @include font($white, 300, 16px, 140%);
+                    margin-bottom: 40px;
+                    opacity: .7;
+                }
+                &-state{
+                    width: 134px;
+                    height: 39px;
+                    background: $blue;
+                    border-radius: 5px;
+                    @include font($white, 700, 14px, 135%);
+                }
+            }
+        }
+    }
+}

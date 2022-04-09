@@ -1,0 +1,157 @@
+@import 'selector';
+
+.header{
+    width: 100%;
+    padding-top: 30px;
+    .menu{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &_link{
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            &-list{
+                margin-right: 50px;
+                &:last-child{
+                    margin-right: 0;
+                }
+                a{
+                    @include font($white, 400, 14px, 135%);
+                    text-decoration: none;
+                    font-family: 'Proxima Nova';
+                    transition: 0.3s all;
+                    &:hover{
+                        opacity: 0.7;
+                    }
+                }
+            }
+        }
+        &_logo{
+            z-index: 2;
+        }
+        &_btn{
+            width: 155px;
+            height: 36px;
+            background: $blue;
+            border-radius: 3px;
+            transition: 0.3s all;
+            a{
+                @include font($white, 600, 13px, 140%);
+                font-family: 'Proxima Nova';
+                text-decoration: none;
+            }
+            &:hover{
+                background: $blueLight;
+                transform: translateY(5px);
+            }
+        }
+        &_burger{
+            z-index: 2;
+            width: 40px;
+            display: none;
+            flex-wrap: wrap;
+            transition: 0.5s all;
+            li{
+                width: 100px;
+                height: 2px;
+                transition: 0.3s all;
+                background: $white;
+                margin-top: 10px;
+                &:first-child{
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+
+    .burger_wrapper{
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        transform: translateY(-420px);
+        transition: 0.3s all;
+        background: #000;
+        position: absolute;
+        &_link{
+            margin: 0 auto;
+            padding-top: 20px;
+            margin-top: 25px;
+            padding-bottom: 20px;   
+            li{
+                text-align: center;
+                margin-top: 20px;
+                a{
+                    @include font($white, 400, 14px, 135%);
+                    text-decoration: none;
+                    font-family: 'Proxima Nova';
+                    transition: 0.3s all;
+                    &:hover{
+                        opacity: 0.7;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.menu_burger.active{
+    transform: rotate(360deg);
+    li{
+        margin-top: 0;
+        &:nth-last-of-type(1){
+            transform: translateY(-2px) rotate(-45deg);
+        }
+        &:nth-last-of-type(2){
+            display: none;
+        }
+        &:nth-last-of-type(3){
+            transform: rotate(45deg);
+        }
+    }
+}
+
+.menu_burger.hidden{
+    z-index: 10;
+    li{
+        margin-top: 10;
+        &:nth-last-of-type(1){
+            transform: rotate(0deg);
+        }
+        &:nth-last-of-type(2){
+            display: block;
+        }
+        &:nth-last-of-type(3){
+            transform: rotate(0deg);
+        }
+    }
+}
+
+.burger_wrapper.active{
+    transform: translateY(0px);
+}
+
+.scroll{
+    width: 32px;
+    height: 32px;
+    background: #018ABE;
+    border-radius: 50%;
+    display: none;
+    right: 16px;
+    bottom: 16px;
+    position: fixed;
+    a{
+        font-size: 22px;
+        text-decoration: none;  
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        width: 80%;
+        color: white;
+    }
+}

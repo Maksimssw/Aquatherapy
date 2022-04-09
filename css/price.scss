@@ -1,0 +1,50 @@
+@import 'selector';
+
+.price{
+    margin-top: 150px;
+    &_wrapper{
+        margin-top: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &_text{
+            width: 416px;
+            margin-right: 134px;
+            &_list{
+                @include font($white, 400, 18px, 140%);
+                font-family: 'Proxima Nova';
+                margin-bottom: 30px;
+                display: flex;
+                justify-content: space-between;
+                position: relative;
+                span{
+                    @include font($white, 700, 18px, 140%);
+                    font-family: 'El Messiri';
+                    text-align: right;
+                }
+                &::before{
+                    content: '';
+                    width: 28px;
+                    height: 14px;
+                    position: absolute;
+                    top: 50%;
+                    left: -50px;
+                    transform: translateY(-50%);
+                    background: url('../img/SVG/blue_list.svg') no-repeat center;
+                }
+            }
+        }
+        &_ph{
+            img{
+                width: 526px;
+                height: 396px;
+                border-radius: 10px;
+                margin-bottom: 30px;
+            }
+            &-title{
+                @include font($white, 700, 21, 29px);
+                text-align: center; 
+            }
+        }
+    }
+}

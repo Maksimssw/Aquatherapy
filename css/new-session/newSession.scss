@@ -1,0 +1,44 @@
+@import '../selector.scss';
+
+.new_sessions{
+    margin-top: 60px;
+    &_wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 60px;
+        &_text{
+            width: 526px;
+            &-data{
+                width: 96px;
+                height: 30px;
+                border-radius: 5px;
+                background: $blue;
+                @include font($white, 700, 14px, 135%);
+                margin-bottom: 50px;
+                font-family: 'Proxima Nova';
+                display: flex;
+                align-items: center;
+                justify-content: center;   
+            }
+            &-title{
+                @include font($white, 700, 24px, 140%);
+                font-family: 'El Messiri';
+                margin-bottom: 30px;
+            }
+        }
+        p{
+            @include font($white, 300, 16px, 140%);
+            opacity: .7;
+        }
+        &_ph{
+            width: 636px;
+            height: 398px;
+            border-radius: 10px;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
